@@ -1,0 +1,151 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root{
+    /*========== Colors ==========*/
+    --first-color: #322FF2;
+    --first-color-light: #E3E2FD;
+    --body-color: #FAFAFF;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Quicksand', sans-serif;
+    --normal-font-size: 1rem;
+}
+
+/*========== BASE ==========*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+}
+
+/*========== ICONS TOOLTIP ==========*/
+.social{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    &, &__container, &__content{
+        display: flex;
+    }
+    &__content{
+        position: relative;
+        padding: .5rem;
+        margin: 0 1rem;
+        background-color: var(--first-color-light);
+        border-radius: 1rem;
+        box-shadow: -2px -2px 8px #FAFAFF,
+                     2px 2px 8px rgba(13, 12, 64, .2);
+        cursor: pointer;
+    }
+    &__icon{
+        font-size: 2rem;
+        color: var(--first-color);
+    }
+    &__tooltip{
+        opacity: 0;
+        position: absolute;
+        padding: .5rem 1rem;
+        background-color: var(--first-color);
+        color: var(--first-color-light);
+        font-size: var(--normal-font-size);
+        white-space: nowrap;
+        font-weight: 700;
+        border-radius: .5rem;
+        pointer-events: none;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--first-color);
+            border-radius: 3px;
+        }
+    }
+    &__content, &__tooltip, &__icon{
+        transition: .3s;
+    }
+
+    &__content:hover{
+        background-color: var(--first-color);
+    }
+    
+    &__content:hover &__icon{
+        color: var(--first-color-light);
+    }
+
+    /*========== Tooltip left ==========*/
+    &__tooltip-left{
+        left: 0;
+        transform: translateX(-100%);
+
+        &::after{
+            top: 50%;
+            transform: translate(50%, -50%) rotate(45deg);
+            right: 1px;
+        }
+    }
+
+    &__content:hover &__tooltip-left{
+        opacity: 1;
+        left: -1rem;
+    }
+
+    /*========== Tooltip top ==========*/
+    &__tooltip-top{
+        top: -2.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after{
+            left: 50%;
+            transform: translate(-50%, 50%) rotate(45deg);
+            bottom: 1px;
+        }
+    }
+
+    &__content:hover &__tooltip-top{
+        opacity: 1;
+        top: -3.25rem;
+    }
+
+    /*========== Tooltip bottom ==========*/
+    &__tooltip-bottom{
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+
+        &::after{
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            top: 1px;
+        }
+    }
+    &__content:hover &__tooltip-bottom{
+        opacity: 1;
+        bottom: -1rem;
+    }
+
+    /*========== Tooltip right  ==========*/
+    &__tooltip-right{
+        right: 0;
+        transform: translateX(100%);
+
+        &::after{
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            left: 1px;
+        }
+    }
+
+    &__content:hover &__tooltip-right{
+        opacity: 1;
+        right: -1rem;
+    }
+}
