@@ -1,7 +1,10 @@
-# Social Icons Tooltip
+# Social Media Icons Tooltips
 ## [Watch it on youtube](https://youtu.be/C03eRxMrYB0)
-### Social Icons Tooltip
-Beautiful icons of social networks with tooltips when hovering the mouse, each icon integrates a tooltip towards a direction in left, top, right and bottom.
+### Social Media Icons Tooltips
 
-Don't forget to join the channel for more videos like this.
-[Bedimcode](https://www.youtube.com/c/Bedimcode)
+- Social Media Icons Tooltips Using HTML And CSS
+- Integrate a tooltip on the right, left, top and bottom.
+
+💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
+
+![preview img](/preview.png)
